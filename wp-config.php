@@ -151,6 +151,18 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 /* That's all, stop editing! Happy Pressing. */
 
 
+if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
+
+    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    if (extension_loaded('newrelic')) {
+      newrelic_name_transaction("redirect");
+    }
+
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+    exit();
+  
+}
 
 
 /** Absolute path to the WordPress directory. */
