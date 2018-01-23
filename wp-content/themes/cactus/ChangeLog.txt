@@ -1,0 +1,75 @@
+/**********************************************************/
+
+== CHANGE LOG == 
+
+= Version 1.1.8 = = 19/01/2018
+* Fix - fixed drop down menu issue
+
+= Version 1.1.7 = = 16/01/2018
+* Add - added footer styles
+* Add - added post options
+* Add - added page sidebar options
+* Update - updated wpml-config.xml
+
+= Version 1.1.6 = = 10/01/2018
+* Add - added page options
+* Add - added "Full Width" page template
+
+= Version 1.1.5 = = 29/12/2017
+* Add - added option "Enable Scroll to Top Button"
+* Optimized: slider
+
+= Version 1.1.4 = = 25/12/2017
+* Fix - fixed "Icon Type" option issue for section Service
+* Fix - fixed image issue for section Shop
+* Add - added admin page - About Cactus
+
+= Version 1.1.3 = = 22/12/2017
+* Optimized: Item delete button in section options
+* Optimized: Video section preview iamges
+* Optimized: Preview image for radios
+* Added: Shop section
+* Fixed: Switch bug in Works section
+* Fixed: Switch bug in Banner section
+
+= Version 1.1.2 = = 20/12/2017
+* Add - added option feature - radio image
+* Fix - fixed Parallax Scrolling issue in customize
+* Add - added icon option for menu
+* Improved selective refresh
+
+= Version 1.1.1 = = 14/12/2017
+* Add - added "Section Padding" option
+* Add - added Header styles
+* Add - added Font Size options
+* Add - added Blog styles
+* Add - added Banner video background options
+* Add - added Header opacity options
+* Add - added styles for section - Service
+* Add - added styles for section - Team
+* Add - added styles for section - Works
+* Add - added styles for section - Testimonial
+* Add - added styles for section - About
+* Add - added styles for section - Contact
+* Add - added frontpage menu options
+* Add - added Top Bar
+
+= Version 1.1.0 = = 28/11/2017
+* Update screenshot.jpg
+* Removed color options
+
+= Version 1.0.9 = = 28/11/2017
+* Fix - fixed "Change Image" issue for section banner
+
+= Version 1.0.8 = = 11/11/2017 
+* Add - added option "Parallax Scrolling" 
+* Add - added sidebar options
+* Add - added animation for section Counter
+* Add - added install & active plugin button
+* Add - added filter function for section Service
+
+= Version 1.0.7 = = 07/11/2017 
+* Add - added WooCommerce support
+
+= Version 1.0.6 = = 30/10/2017 
+* Add - added front page template & theme options

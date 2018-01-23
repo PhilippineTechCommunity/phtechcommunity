@@ -1,0 +1,471 @@
+<wpml-config>
+      <admin-texts>
+        <key name='cactus'>
+		    <!-- section banner -->
+            <key name='banner'>
+				<key name='0'>
+			   		<key name='title' />
+			  		<key name='subtitle' />
+					<key name='btn_text' />
+				</key>
+				<key name='1'>
+			   		<key name='title' />
+			  		<key name='subtitle' />
+					<key name='btn_text' />
+				</key>
+				<key name='2'>
+			   		<key name='title' />
+			  		<key name='subtitle' />
+					<key name='btn_text' />
+				</key>
+				<key name='3'>
+			   		<key name='title' />
+			  		<key name='subtitle' />
+					<key name='btn_text' />
+				</key>
+				<key name='4'>
+			   		<key name='title' />
+			  		<key name='subtitle' />
+					<key name='btn_text' />
+				</key>
+				<key name='5'>
+			   		<key name='title' />
+			  		<key name='subtitle' />
+					<key name='btn_text' />
+				</key>
+			</key>
+			<!-- section service -->
+			<key name='section_title_service' />
+			<key name='section_subtitle_service' />
+			<key name='service'>
+				<key name='0'>
+			   		<key name='title' />
+			  		<key name='text' />
+					<key name='title_link' />
+				</key>
+				<key name='1'>
+			   		<key name='title' />
+			  		<key name='text' />
+					<key name='title_link' />
+				</key>
+				<key name='2'>
+			   		<key name='title' />
+			  		<key name='text' />
+					<key name='title_link' />
+				</key>
+				<key name='3'>
+			   		<key name='title' />
+			  		<key name='text' />
+					<key name='title_link' />
+				</key>
+				<key name='4'>
+			   		<key name='title' />
+			  		<key name='text' />
+					<key name='title_link' />
+				</key>
+				<key name='5'>
+			   		<key name='title' />
+			  		<key name='text' />
+					<key name='title_link' />
+				</key>
+				<key name='6'>
+			   		<key name='title' />
+					<key name='text' />
+					<key name='title_link' />
+				</key>
+				<key name='7'>
+			   		<key name='title' />
+			  		<key name='text' />
+					<key name='title_link' />
+				</key>
+				<key name='8'>
+			   		<key name='title' />
+			  		<key name='text' />
+					<key name='title_link' />
+				</key>
+				<key name='9'>
+			   		<key name='title' />
+			  		<key name='text' />
+					<key name='title_link' />
+				</key>
+			 </key>
+			
+			<!-- section works -->
+			<key name='section_title_works' />
+			<key name='section_subtitle_works' />
+			<key name='works'>
+				<key name='0'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='1'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='2'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='3'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='4'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='5'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='6'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='7'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='8'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='9'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+			 </key>
+			 
+			 <!-- section promo -->
+			<key name='section_title_promo' />
+			<key name='section_subtitle_promo' />
+			<key name='text_promo' />
+			<key name='button_text_promo' />
+			<key name='button_link_promo' />
+			
+			<!-- section team -->
+			<key name='section_title_team' />
+			<key name='section_subtitle_team' />
+			<key name='team'>
+				<key name='0'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='link' />
+				</key>
+				<key name='1'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='link' />
+				</key>
+				<key name='2'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='link' />
+				</key>
+				<key name='3'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='link' />
+				</key>
+				<key name='4'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='link' />
+				</key>
+				<key name='5'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='link' />
+				</key>
+				<key name='6'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='link' />
+				</key>
+				<key name='7'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='link' />
+				</key>
+				<key name='8'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='link' />
+				</key>
+				<key name='9'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='link' />
+				</key>
+			 </key>
+			 
+			 <!-- section counter -->
+			<key name='section_title_counter' />
+			<key name='section_subtitle_counter' />
+			<key name='counter'>
+				<key name='0'>
+			   		<key name='title' />
+				</key>
+				<key name='1'>
+			   		<key name='title' />
+				</key>
+				<key name='2'>
+			   		<key name='title' />
+				</key>
+				<key name='3'>
+			   		<key name='title' />
+				</key>
+				<key name='4'>
+			   		<key name='title' />
+				</key>
+				<key name='5'>
+			   		<key name='title' />
+				</key>
+				<key name='6'>
+			   		<key name='title' />
+				</key>
+				<key name='7'>
+			   		<key name='title' />
+				</key>
+				<key name='8'>
+			   		<key name='title' />
+				</key>
+				<key name='9'>
+			   		<key name='title' />
+				</key>
+			 </key>
+			 
+			  <!-- section testimonial -->
+			<key name='section_title_testimonial' />
+			<key name='section_subtitle_testimonial' />
+			<key name='testimonial'>
+				<key name='0'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='text' />
+				</key>
+				<key name='1'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='text' />
+				</key>
+				<key name='2'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='text' />
+				</key>
+				<key name='3'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='text' />
+				</key>
+				<key name='4'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='text' />
+				</key>
+				<key name='5'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='text' />
+				</key>
+				<key name='6'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='text' />
+				</key>
+				<key name='7'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='text' />
+				</key>
+				<key name='8'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='text' />
+				</key>
+				<key name='9'>
+			   		<key name='name' />
+					<key name='byline' />
+					<key name='text' />
+				</key>
+			 </key>
+			<key name='clients'>
+				<key name='0'>
+			   		<key name='title' />
+				</key>
+				<key name='1'>
+			   		<key name='title' />
+				</key>
+				<key name='2'>
+			   		<key name='title' />
+				</key>
+				<key name='3'>
+			   		<key name='title' />
+				</key>
+				<key name='4'>
+			   		<key name='title' />
+				</key>
+				<key name='5'>
+			   		<key name='title' />
+				</key>
+				<key name='6'>
+			   		<key name='title' />
+				</key>
+				<key name='7'>
+			   		<key name='title' />
+				</key>
+				<key name='8'>
+			   		<key name='title' />
+				</key>
+				<key name='9'>
+			   		<key name='title' />
+				</key>
+			 </key>
+			 
+			 <!-- section news -->
+			<key name='section_title_news' />
+			<key name='section_subtitle_news' />
+			<key name='button_text_news' />
+			<key name='button_link_news' />
+			
+			<!-- section contact -->
+			<key name='section_title_contact' />
+			<key name='section_subtitle_contact' />
+			
+			<!-- Top Bar Left -->
+			<key name='topbar_left'>
+				<key name='0'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				<key name='1'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				<key name='2'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				<key name='3'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				<key name='4'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				<key name='5'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				<key name='6'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				
+			 </key>
+			 
+			 <!-- Top Bar Right -->
+			<key name='topbar_right'>
+				<key name='0'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				<key name='1'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				<key name='2'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				<key name='3'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				<key name='4'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				<key name='5'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				<key name='6'>
+			   		<key name='text' />
+					<key name='link' />
+				</key>
+				
+			 </key>
+			  <!-- Main Menu Items -->
+			 <key name='frontpage_menu'>
+				<key name='0'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='1'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='2'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='3'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='4'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='5'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='6'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				
+			 </key>
+			 
+			 <!-- Footer Left Icons -->
+			 <key name='footer_left_icons'>
+				<key name='0'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='1'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='2'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='3'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='4'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='5'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				<key name='6'>
+			   		<key name='title' />
+					<key name='link' />
+				</key>
+				
+			 </key>
+			 
+			 
+			 
+        </key>
+    </admin-texts>
+</wpml-config>

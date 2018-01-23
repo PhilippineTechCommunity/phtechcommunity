@@ -1,0 +1,59 @@
+.cactus-upsell {
+    background: #fff;
+    padding: 21px;
+    border-radius: 3px;
+}
+.cactus-upsell .upsell-pro-label {
+    font-weight: bold;
+    background: #a7a7a7;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 2px 6px 2px 7px;
+    letter-spacing: .1px;
+    font-size: 12px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.cactus-upsell .button{
+	margin-top:20px;
+}
+#accordion-section-view-pro-features {
+    margin-bottom: 20px;
+}
+.customize-control-radio-image img {
+    border-width: 2px!important;
+}
+
+.repeater-row-header .repeater-row-remove {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    display:block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 0;
+    line-height: 0;
+}
+
+.repeater-row-header .repeater-row-remove:before {
+    content: "\f1f8";
+    font: normal normal normal 14px/1 FontAwesome;
+    line-height: 20px;
+
+}
+
+.customize-control-repeater .repeater-row-header {
+    padding-left: 30px!important;
+}
+
+.button-link.repeater-row-remove {
+    display:none;
+}
+.icon-picker-selector{
+	position: absolute;
+    right: 0;
+    top: 3px;
+    cursor: pointer;
+	}
