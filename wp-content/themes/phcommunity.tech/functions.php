@@ -1,16 +1,20 @@
 <?php
-function my_theme_enqueue_styles() {
+/**
+ * Functions for the tech community theme.
+ *
+ * @package phcommunity.tech
+ */
 
-    $parent_style = 'cactus-style'; // This is 'cactus-style' for the Cactus Parent theme.
+/**
+ * Theme asset loading.
+ */
+function techleadstheme_enqueue_styles() {
+	$parent_style = 'cactus-style';
 
-    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'cactus-child-style',
-        get_stylesheet_directory_uri() . '/style.css',
-        array( $parent_style ),
-        wp_get_theme()->get('Version')
-    );
+	wp_enqueue_style( 'techleadstheme-style',
+		get_stylesheet_directory_uri() . '/assets/css/themestyle.css',
+		array( $parent_style ),
+		wp_get_theme()->get( 'Version' )
+	);
 }
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
-
-
-
+add_action( 'wp_enqueue_scripts', 'techleadstheme_enqueue_styles' );
