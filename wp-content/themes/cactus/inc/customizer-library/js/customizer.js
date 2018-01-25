@@ -284,6 +284,25 @@
 			} );
 	} );
 	
+	
+	wp.customize( 'cactus[text_align_banner]', function( value ) {
+		value.bind( function( to ) {
+				$( '.cactus-section-banner .cactus-container' ).css({'text-align':to});
+		} );
+	} );
+	
+	wp.customize( 'cactus[separator_color_banner]', function( value ) {
+		value.bind( function( to ) {
+				$( '.cactus-section-banner .cactus-section-separator' ).css({'color':to});
+		} );
+	} );
+	
+	wp.customize( 'cactus[separator_height_banner]', function( value ) {
+		value.bind( function( to ) {
+				$( '.cactus-section-banner .cactus-section-separator' ).css({'height':parseInt(to)+'px'});
+		} );
+	} );
+	
 	$(document).on('click','.customize-partial-edit-shortcut-banner_selective',function(){
 		wp.customize.preview.send( 'focus-control-for-setting', 'cactus[banner]' );
 		});

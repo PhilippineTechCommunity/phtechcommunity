@@ -1,8 +1,8 @@
 /*
 Theme Name: Cactus
 Author: VelaThemes
-Description: Cactus is a modern and elegant WordPress theme which can be used to build both one-page and multi-page sites. With 10+ prebuilt sections, it is ideal for any type of site like design agency, corporate, restaurant, personal, showcase, magazine, portfolio, etc. Not only for the sections in front page, Cactus also offers various options for header, footer, pages & posts, etc. And the theme is also compatible with WooCommerce, which makes you build an online store easily. 
-Version: 1.1.8
+Description: Cactus is a modern and elegant WordPress theme which can be used to build both one-page and multi-page sites. With 10+ prebuilt sections, it is ideal for any type of site like design agency, corporate, restaurant, personal, showcase, magazine, portfolio, ecommerce, etc. Not only for the sections in front page, Cactus also offers various options for header, footer, pages & posts, etc. And the theme is compatible with Elementor Page Builder, WooCommerce, Polylang.
+Version: 1.1.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cactus
@@ -5355,8 +5355,55 @@ body.cactus-header-side-right {
 .parallax-destroy{
 	background-attachment: scroll !important;
 	background-position: center !important;
-	}
+}
 .copyright_selective > span > p,
 .copyright_selective > p{
 	display:inline;
-	}
+}
+
+/*Border*/
+.cactus-section-separator {
+	color: #fff; /*Control Color*/
+    font-size: 100px; /*Control Height*/
+    position: absolute;
+    z-index: 9999;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 1em;
+    overflow: hidden;
+}
+
+.cactus-section-separator svg {
+    fill: currentColor;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.cactus-triangle-up svg,
+.cactus-triangle-down svg {
+    width: 2em;
+    height: 1em;
+    position: absolute;
+    left: 50%;
+    margin-left: -1em;
+}
+
+.cactus-triangle-down:before,
+.cactus-triangle-down:after {
+    content: "";
+    width:50%;
+    height: 1em;
+    background-color: currentColor;
+    position: absolute;
+    top: 0;
+}
+
+.cactus-triangle-down:before {
+    left: -1em;
+}
+
+.cactus-triangle-down:after {
+    right: -1em;
+}

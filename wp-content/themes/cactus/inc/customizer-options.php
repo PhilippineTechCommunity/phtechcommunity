@@ -859,6 +859,59 @@ function cactus_customizer_library_options() {
 					'type'    => 'text',
 					'default' => ''
 				);
+			
+			$options['text_align_'.$key] = array(
+					'id' => 'text_align_'.$key,
+					'label'   => __( 'Text Align', 'cactus' ),
+					'section' => $section,
+					'transport' => 'postMessage',
+					'type'    => 'radio',
+					'default' => 'center',
+					'choices' => array( 'left'=>__( 'Align Left', 'cactus' ),'center'=>__( 'Align Center', 'cactus' ),'right'=>__( 'Align Right', 'cactus' ))
+				);
+				
+			$options['bottom_separator_'.$key] = array(
+					'id' => 'bottom_separator_'.$key,
+					'label'   => __( 'Bottom Separator', 'cactus' ),
+					'section' => $section,
+					//'transport' => 'postMessage',
+					'type'    => 'checkbox',
+					'default' => ''
+				);
+			$options['separator_type_'.$key] = array(
+					'id' => 'separator_type_'.$key,
+					'label'   => __( 'Separator Type', 'cactus' ),
+					'section' => $section,
+					'type'    => 'select',
+					//'transport' => $transport,
+					'choices' => array( 'diagonal'=>__( 'Diagonal', 'cactus' ),
+										'diagonal-reverse'=>__( 'Diagonal Reverse', 'cactus' ),
+										'triangle-up'=>__( 'Triangle Up', 'cactus' ),
+										'triangle-down'=>__( 'Triangle Down', 'cactus' ),
+										'big-triangle-up'=>__( 'Big Triangle Up', 'cactus' ),
+										'big-triangle-down'=>__( 'Big Triangle Down', 'cactus' ),
+										'curve-up'=>__( 'Curve Up', 'cactus' ),
+										'curve-down'=>__( 'Curve Down', 'cactus' ),
+										'cloud'=>__( 'Cloud', 'cactus' ),
+										),
+					'default' => 'cloud'
+				);
+			$options['separator_color_'.$key] = array(
+					'id' => 'separator_color_'.$key,
+					'label'   => __( 'Separator Color', 'cactus' ),
+					'section' => $section,
+					'transport' => 'postMessage',
+					'type'    => 'color',
+					'default' => '#fff'
+				);
+			$options['separator_height_'.$key] = array(
+					'id' => 'separator_height_'.$key,
+					'label'   => __( 'Separator Height', 'cactus' ),
+					'section' => $section,
+					'transport' => 'postMessage',
+					'type'    => 'text',
+					'default' => '100'
+				);
 				
 			break;
 			

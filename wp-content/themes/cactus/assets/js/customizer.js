@@ -67,6 +67,7 @@ jQuery(document).ready(function($) {
         });
     });
 
+
 	/*icon type switch*/
     function icon_type_switch(icon_type,row) {
 		if(!row.length)

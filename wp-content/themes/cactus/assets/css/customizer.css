@@ -56,4 +56,22 @@
     right: 0;
     top: 3px;
     cursor: pointer;
-	}
+}
+
+label[for="_customize-input-cactus[text_align_banner]-radio-left"]:before {
+    content: "\f036";
+    font: normal normal normal 14px/12px FontAwesome;
+    margin-right: 5px;
+}
+
+label[for="_customize-input-cactus[text_align_banner]-radio-center"]:before {
+    content: "\f037";
+    font: normal normal normal 14px/12px FontAwesome;
+    margin-right: 5px;
+}
+
+label[for="_customize-input-cactus[text_align_banner]-radio-right"]:before {
+    content: "\f038";
+    font: normal normal normal 14px/12px FontAwesome;
+    margin-right: 5px;
+}

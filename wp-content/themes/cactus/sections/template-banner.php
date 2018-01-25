@@ -1,8 +1,14 @@
 <?php
 global $allowedposttags, $cactus_section_key;
 $banner = cactus_option('banner');
-$type_banner = cactus_option('type_banner');
-$video_banner = cactus_option('video_banner');
+$type_banner = cactus_option('type_'.$cactus_section_key);
+$video_banner = cactus_option('video_'.$cactus_section_key);
+$separator_type = cactus_option('separator_type_'.$cactus_section_key);
+$separator_color = cactus_option('separator_color_'.$cactus_section_key);
+$separator_height = cactus_option('separator_height_'.$cactus_section_key);
+$bottom_separator  = cactus_option('bottom_separator_'.$cactus_section_key);
+$text_align  = cactus_option('text_align_'.$cactus_section_key);
+
 $css_class = '';
 if(is_array($banner) && count($banner)>1)
 	$css_class = 'cactus-slider owl-carousel';
@@ -16,6 +22,7 @@ if( $type_banner=='2' ){
 	$hide1 = 'hide';
 	}
 ?>
+
 <div class="cactus-section">
 <?php if($type_banner=='1'|| $type_banner=='' || is_customize_preview() ):?>
    <?php if( is_customize_preview() ):?>
@@ -37,11 +44,14 @@ if( $type_banner=='2' ){
       <div class="cactus-slider-caption-wrap">
         <div class="cactus-slider-caption">
           <div class="cactus-slider-caption-inner">
+          <div class="cactus-container" style="text-align:<?php echo esc_attr($text_align);?>;">
             <h2 class="cactus-slider-title"><?php echo wp_kses( $item['title'] , $allowedposttags );?></h2>
             <p class="cactus-slider-desc"><?php echo wp_kses( $item['subtitle'] , $allowedposttags );?></p>
+            
             <?php if($item['btn_text']!=''):?>
             <div class="cactus-action"> <a href="<?php echo esc_attr($item['btn_link']);?>"><span class="cactus-btn primary"><?php echo esc_attr($item['btn_text']);?></span></a> </div>
             <?php endif;?>
+            </div>
           </div>
         </div>
       </div>
@@ -57,15 +67,18 @@ if( $type_banner=='2' ){
       <div class="cactus-slider-caption-wrap">
         <div class="cactus-slider-caption">
           <div class="cactus-slider-caption-inner">
+          <div class="cactus-container"  style="text-align:<?php echo esc_attr($text_align);?>;">
             <h2 class="cactus-slider-title video_title_banner_selective"><?php echo wp_kses( cactus_option('video_title_'.$cactus_section_key) , $allowedposttags );?></h2>
             <p class="cactus-slider-desc video_subtitle_banner_selective"><?php echo wp_kses( cactus_option('video_subtitle_'.$cactus_section_key) , $allowedposttags );?></p>
             <?php if(cactus_option('button_text_'.$cactus_section_key)!=''):?>
             <div class="cactus-action"> <a class="button_link_banner_selective" href="<?php echo esc_attr(cactus_option('button_link_'.$cactus_section_key));?>"><span class="cactus-btn primary button_text_banner_selective"><?php echo esc_attr(cactus_option('button_text_'.$cactus_section_key));?></span></a> </div>
             <?php endif;?>
+            </div>
           </div>
         </div>
       </div>
     </div>
     </div>
   <?php endif;?>
+  <?php if($bottom_separator=='1') echo cuctus_get_separator($separator_type,$separator_color,$separator_height);?>
 </div>

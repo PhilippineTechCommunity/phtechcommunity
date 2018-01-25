@@ -1,0 +1,69 @@
+.widget_cactus_recent_posts {
+	text-align: left;
+}
+
+.widget-box .widget-img {
+	float: left;
+	margin-right: 15px;
+}
+
+.widget-box .widget-img img {
+	width: 80px;
+	margin-top: 3px;
+}
+
+.widget-project .row {
+	margin-left: -2px;
+	margin-right: -2px;
+}
+
+.widget-project [class*='col-xs'] {
+    padding: 2px;
+}
+
+.widget_cactus_recent_posts li {
+	clear: left;
+}
+
+.widget_cactus_recent_posts li,
+.widget_contact_info li,
+.widget_text li {
+	background: none;
+	padding-left: 0;
+}
+
+.widget-post li {
+	list-style-type: none;
+	margin-bottom: 15px;
+}
+
+.widget-post img {
+	display: block;
+	float: left;
+	width: 20%;
+	margin-right: 3%;
+	border-radius: 5px;
+}
+
+.widget-post .widget-post-box {
+	float: left;
+	width: 75%;
+	margin-top: -5px;
+}
+
+.widget-post .widget-post-box.no-img {
+	width: 100%;
+}
+.widget-project [class*='col-xs'] {
+    padding: 2px;
+}
+
+.widget_cactus_recent_posts .widget-project .widget-img{
+	margin:0;
+	}
+.cactus-slider-title {
+    font-size: 40px;
+}
+.page-template-template-fullwidth .cactus-slider-title {
+    font-size: 60px;
+}

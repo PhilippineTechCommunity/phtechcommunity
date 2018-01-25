@@ -1625,3 +1625,85 @@ function cactus_page_title_bar(  $content, $type='page'){
 	}
 
 add_filter( 'cactus_page_title_bar', 'cactus_page_title_bar', 10, 2 );
+
+/**
+ * Get separator
+ *
+ */
+function cuctus_get_separator($type = 'cloud', $color = '#fff', $height = '100' ){
+
+	$html = '<div class="cactus-section-separator" style="color:'.esc_attr($color).'; height:'.absint($height).'px;">';
+	switch($type){
+		case "diagonal":
+			$html .= '<svg preserveAspectRatio="none" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 100 L1000 0 L1000 100 Z"></path>
+                                            </svg>';
+		break;
+		case "diagonal-reverse":
+			$html .= '<svg preserveAspectRatio="none" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 0 L1000 100 L0 100 Z" fill="#fff"></path>
+                                            </svg>';
+		break;
+		case "triangle-up":
+			$html .= '<svg preserveAspectRatio="none" viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 10L10 0 20 10z"></path>
+                                            </svg>';
+		break;
+		case "triangle-down":
+			$html .= '<svg preserveAspectRatio="none" viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20 0L10 10 0 0 0 10 20 10z"></path>
+                                            </svg>';
+		break;
+		case "big-triangle-up":
+			$html .= '<svg preserveAspectRatio="none" viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 10L10 0 20 10z"></path>
+                                            </svg>';
+		break;
+		case "big-triangle-down":
+			$html .= '<svg preserveAspectRatio="none" viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20 0L10 10 0 0 0 10 20 10z"></path>
+                                            </svg>';
+		break;
+		case "curve-up":
+			$html .= '<svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+                                            </svg>';
+		break;
+		case "curve-down":
+			$html .= '<svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 100 L0 0 C50 100 80 100 100 0 L100 100Z"></path>
+                                            </svg>';
+		break;
+		case "cloud":
+			$html .= '<svg id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                <path d="M-5 100 Q 0 20 5 100 Z
+                                                         M0 100 Q 5 0 10 100
+                                                         M5 100 Q 10 30 15 100
+                                                         M10 100 Q 15 10 20 100
+                                                         M15 100 Q 20 30 25 100
+                                                         M20 100 Q 25 -10 30 100
+                                                         M25 100 Q 30 10 35 100
+                                                         M30 100 Q 35 30 40 100
+                                                         M35 100 Q 40 10 45 100
+                                                         M40 100 Q 45 50 50 100
+                                                         M45 100 Q 50 20 55 100
+                                                         M50 100 Q 55 40 60 100
+                                                         M55 100 Q 60 60 65 100
+                                                         M60 100 Q 65 50 70 100
+                                                         M65 100 Q 70 20 75 100
+                                                         M70 100 Q 75 45 80 100
+                                                         M75 100 Q 80 30 85 100
+                                                         M80 100 Q 85 20 90 100
+                                                         M85 100 Q 90 50 95 100
+                                                         M90 100 Q 95 25 100 100
+                                                         M95 100 Q 100 15 105 100 Z">
+                                                </path>
+                                            </svg>';
+		break;
+		
+		
+		
+		}
+		$html .= '</div>';
+		return $html;
+	}

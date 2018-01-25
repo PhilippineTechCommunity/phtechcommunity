@@ -2,6 +2,10 @@
 
 == CHANGE LOG == 
 
+= Version 1.1.9 = = 23/01/2018
+* Add - added banner bottom separator
+* Add - added Text Align option for section banner
+
 = Version 1.1.8 = = 19/01/2018
 * Fix - fixed drop down menu issue
 
