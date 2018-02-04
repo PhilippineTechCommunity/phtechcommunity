@@ -95,6 +95,56 @@ jQuery(document).ready(function($) {
         cactusFxdHeader();
 		onScroll();
     })
+	
+	// hide animation items
+	  if($().waypoint && $(window).width() > 919 ) {
+		  jQuery('.cactus-animation').each(function(){
+			  if($(this).data('imageanimation')==="yes"){
+				  $(this).find("img,i.fa").css("visibility","hidden");
+			  }else{
+				  $(this).css("visibility","hidden");
+			  }
+		  });
+	  }
+	// home page animation
+	var cactus_animation = function (e){
+	
+		e.css({'visibility':'visible'});
+		e.find("img,i.fa").css({'visibility':'visible'});
+	
+		// this code is executed for each appeared element
+		var animation_type       = e.data('animationtype');
+		var animation_duration   = e.data('animationduration');
+		var image_animation      = e.data('imageanimation');
+		if(image_animation === "yes"){
+							 
+		e.find("img,i.fa").addClass("animated "+animation_type);
+	
+		if(animation_duration) {
+			e.find("img,i.fa").css('-moz-animation-duration', animation_duration+'s');
+			e.find("img,i.fa").css('-webkit-animation-duration', animation_duration+'s');
+			e.find("img,i.fa").css('-ms-animation-duration', animation_duration+'s');
+			e.find("img,i.fa").css('-o-animation-duration', animation_duration+'s');
+			e.find("img,i.fa").css('animation-duration', animation_duration+'s');
+			}
+	
+		}else{
+			e.addClass("animated "+animation_type);
+	
+			if(animation_duration) {
+				e.css('-moz-animation-duration', animation_duration+'s');
+				e.css('-webkit-animation-duration', animation_duration+'s');
+				e.css('-ms-animation-duration', animation_duration+'s');
+				e.css('-o-animation-duration', animation_duration+'s');
+				e.css('animation-duration', animation_duration+'s');
+				}
+			}
+		}
+		
+		$('.cactus-animation').each(function(index, element) {
+			var el = $(this);
+			el.waypoint(function() {cactus_animation(el);},{ triggerOnce: true, offset: '90%' });
+		});
 
     /* smooth scroll*/
     $(document).on('click', "a.scroll,.site-nav a[href^='#'],.cactus-main-nav a[href^='#']", function(e) {
@@ -155,11 +205,15 @@ jQuery(document).ready(function($) {
             }
         }
     });
-
+	/*counter up*/
+	if($('.counter').length)
+		$('.counter').counterUp({delay: 10, time: 3500});
+	/*testimonials*/
     $(".cactus-testimonials-carousel").owlCarousel({
         items: 1,
         nav: true
     });
+	/*clients*/
     $(".cactus-clients-carousel").owlCarousel({
         responsive: {
             0: {
@@ -180,7 +234,7 @@ jQuery(document).ready(function($) {
         },
         dots: true
     });
-
+	/*slider*/
     $(".cactus-slider").owlCarousel({
         items: 1,
         onRefreshed: adjustStretchHeader,

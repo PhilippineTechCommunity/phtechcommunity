@@ -2,7 +2,7 @@
 Theme Name: Cactus
 Author: VelaThemes
 Description: Cactus is a modern and elegant WordPress theme which can be used to build both one-page and multi-page sites. With 10+ prebuilt sections, it is ideal for any type of site like design agency, corporate, restaurant, personal, showcase, magazine, portfolio, ecommerce, etc. Not only for the sections in front page, Cactus also offers various options for header, footer, pages & posts, etc. And the theme is compatible with Elementor Page Builder, WooCommerce, Polylang.
-Version: 1.1.9
+Version: 1.2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cactus
@@ -1044,13 +1044,8 @@ ul.footer-links {
  */
 
 .page-title-bar {
-	padding: 30px 0;
-}
-
-.page-title h3 {
-	font-size: 18px;
-	margin: 0 0 30px;
-	font-weight: 400;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .page-title h1,
@@ -1060,62 +1055,125 @@ h1.page-title {
 	margin: 0;
 }
 
-ol.breadcrumb-nav {
-	margin: 0;
-	line-height: 20px;
+.page-title-bar.text-light .page-title h1,
+.page-title-bar.text-light h1.page-title,
+.page-title-bar.text-light,
+.page-title-bar.text-light a {
+	color: #fff;
 }
 
-.breadcrumb-nav li {
-	list-style-type: none;
-	display: inline-block;
+.page-title-bar-inner {
+	display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+	-webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-align: center;
 }
 
-.breadcrumb-nav li a {
-	color: inherit;
+.page-title,
+.breadcrumb-nav {
+	
 }
 
-.breadcrumb-nav li + li {
-	margin-left: 5px;
-}
-
-.breadcrumb-nav > li + li:before {
-	content: "\/";
-	margin-right: 5px;
-}
-
-.title-left .page-title {
-	float: left;
-}
-
-.title-left .breadcrumb-nav,
-.page-title-bar.title-left #crumbs {
-	float: right;
-}
-
-.title-center .container {
-	text-align: center;
-}
-
-.title-center .page-title {
-	margin-bottom: 30px;
-}
-
-.title-center ol.breadcrumb-nav {
-	line-height: 30px;
+.title-left .breadcrumb-nav {
+	-webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-flex-pack: flex-end;
+    -ms-justify-content: flex-end;
+    justify-content: flex-end;
+    -ms-flex-pack: end;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    -ms-flex-positive: 1;
+    -ms-flex-grow: 1;
+    flex-grow: 1;
+    text-align: right;
 }
 
 .title-right .page-title {
-	float: right;
+	-webkit-order: 2;
+    -moz-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-flex-pack: flex-end;
+    -ms-justify-content: flex-end;
+    justify-content: flex-end;
+    -ms-flex-pack: end;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    -ms-flex-positive: 1;
+    -ms-flex-grow: 1;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.title-center .page-title-bar-inner,
+.title-left2 .page-title-bar-inner,
+.title-right2 .page-title-bar-inner {
+	-webkit-flex-flow: column wrap;
+    -moz-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+	-webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-flex-pack: center;
+    -ms-justify-content: center;
+    justify-content: center;
+}
+
+.title-center .page-title-bar-inner {
+	text-align: center;
+}
+
+.title-left2 .page-title-bar-inner {
+	text-align: left;
+}
+
+.title-right2 .page-title-bar-inner {
 	text-align: right;
 }
 
-.title-right .breadcrumb-nav {
-	float: left;
+
+.title-center .page-title + .breadcrumb-nav,
+.title-left2 .page-title + .breadcrumb-nav,
+.title-right2 .page-title + .breadcrumb-nav {
+	margin-top: 10px;
 }
+
+.title-center .page-title,
+.title-left2 .page-title,
+.title-right2 .page-title,
+.title-center .breadcrumb-nav,
+.title-left2 .breadcrumb-nav,
+.title-right2 .breadcrumb-nav {
+	width: 100%;
+}
+
+.page-wrap {
+    padding: 50px 0;
+}
+
+.frontpage .page-wrap,
+.page-template-template-fullwidth .page-wrap {
+    padding: 0;
+}
+
 .page .entry-main{
 	padding-top:20px;
 	padding-bottom:20px;
-	}
+}
 
 .entry-main:before,
 .entry-main:after {

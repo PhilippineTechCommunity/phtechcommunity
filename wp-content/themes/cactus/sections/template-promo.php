@@ -1,5 +1,5 @@
 <?php
-global $allowedposttags, $cactus_section_key;;
+global $allowedposttags, $cactus_section_key, $cactus_animation;
 
 $section_title = cactus_option('section_title_'.$cactus_section_key);
 $section_subtitle = cactus_option('section_subtitle_'.$cactus_section_key);
@@ -33,11 +33,11 @@ if( $style=='2' ){
         </div>
         <div class="cactus-box-inner">
           <div class="cactus-box-content">
-            <h2 class="cactus-section-title text-left <?php echo 'section_title_'.$cactus_section_key.'_selective';?>"><?php echo wp_kses( $section_title , $allowedposttags );?></h2>
-            <p class="cactus-section-desc text-left <?php echo 'section_subtitle_'.$cactus_section_key.'_selective';?>"><?php echo wp_kses( $section_subtitle , $allowedposttags );?></p>
-            <div class="cactus-promo <?php echo 'text_'.$cactus_section_key.'_selective';?>"><?php echo wp_kses( $text , $allowedposttags );?></div>
+            <h2 class="cactus-section-title text-left <?php echo 'section_title_'.$cactus_section_key.'_selective '.$cactus_animation;?>" data-animationduration="0.4" data-animationtype="fadeInUp"><?php echo wp_kses( $section_title , $allowedposttags );?></h2>
+            <p class="cactus-section-desc text-left <?php echo 'section_subtitle_'.$cactus_section_key.'_selective '.$cactus_animation;?>" data-animationduration="0.6" data-animationtype="fadeInUp"><?php echo wp_kses( $section_subtitle , $allowedposttags );?></p>
+            <div class="cactus-promo <?php echo 'text_'.$cactus_section_key.'_selective '.$cactus_animation;?>" data-animationduration="0.7" data-animationtype="fadeInUp"><?php echo wp_kses( $text , $allowedposttags );?></div>
              <?php if($button_text!=''):?>
-            <div class="cactus-action"> <a href="<?php echo esc_url($button_link);?>"><span class="cactus-btn primary <?php echo 'button_text_'.$cactus_section_key.'_selective';?>"><?php echo esc_attr($button_text);?></span></a> </div>
+            <div class="cactus-action"> <a href="<?php echo esc_url($button_link);?>"><span class="cactus-btn primary <?php echo 'button_text_'.$cactus_section_key.'_selective '.$cactus_animation;?>" data-animationduration="1.0" data-animationtype="fadeInUp"><?php echo esc_attr($button_text);?></span></a> </div>
             <?php endif;?>
           </div>
         </div>
@@ -48,11 +48,11 @@ if( $style=='2' ){
          <div class="cactus-box right <?php echo $hide2;?>">
         <div class="cactus-box-inner">
           <div class="cactus-box-content">
-            <h2 class="cactus-section-title text-left <?php echo 'section_title_'.$cactus_section_key.'_selective';?>"><?php echo wp_kses( $section_title , $allowedposttags );?></h2>
-            <p class="cactus-section-desc text-left <?php echo 'section_subtitle_'.$cactus_section_key.'_selective';?>"><?php echo wp_kses( $section_subtitle , $allowedposttags );?></p>
-            <div class="cactus-promo <?php echo 'text_'.$cactus_section_key.'_selective';?>"><?php echo wp_kses( $text , $allowedposttags );?></div>
+            <h2 class="cactus-section-title text-left <?php echo 'section_title_'.$cactus_section_key.'_selective '.$cactus_animation;?>" data-animationduration="0.4" data-animationtype="fadeInUp"><?php echo wp_kses( $section_title , $allowedposttags );?></h2>
+            <p class="cactus-section-desc text-left <?php echo 'section_subtitle_'.$cactus_section_key.'_selective '.$cactus_animation;?>" data-animationduration="0.6" data-animationtype="fadeInUp"><?php echo wp_kses( $section_subtitle , $allowedposttags );?></p>
+            <div class="cactus-promo <?php echo 'text_'.$cactus_section_key.'_selective '.$cactus_animation;?>" data-animationduration="0.8" data-animationtype="fadeInUp"><?php echo wp_kses( $text , $allowedposttags );?></div>
              <?php if($button_text!=''):?>
-            <div class="cactus-action"> <a class="button_link_promo_selective" href="<?php echo esc_url($button_link);?>"><span class="cactus-btn primary <?php echo 'button_text_'.$cactus_section_key.'_selective';?>"><?php echo esc_attr($button_text);?></span></a> </div>
+            <div class="cactus-action"> <a class="button_link_promo_selective" href="<?php echo esc_url($button_link);?>"><span class="cactus-btn primary <?php echo 'button_text_'.$cactus_section_key.'_selective '.$cactus_animation;?>" data-animationduration="1.0" data-animationtype="fadeInUp"><?php echo esc_attr($button_text);?></span></a> </div>
             <?php endif;?>
           </div>
         </div>

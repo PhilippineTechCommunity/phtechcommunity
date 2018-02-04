@@ -27,7 +27,7 @@ $section_subtitle = cactus_option('section_subtitle_'.$cactus_section_key);
       <li>
         <div class="cactus-counter-item">
           <div class="cactus-counter-figure"> <i class="fa fa-<?php echo esc_attr($icon);?>" style="font-size: 50px;"></i> </div>
-          <div class="cactus-counter-num counter"><?php echo esc_attr($item['number']);?></div>
+          <div class="cactus-counter-num counter" data-counterup-nums="<?php echo esc_attr($item['number']);?>"><?php echo esc_attr($item['number']);?></div>
           <h4 class="cactus-counter-title"><?php echo esc_attr($item['title']);?></h4>
         </div>
       </li>

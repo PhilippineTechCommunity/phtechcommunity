@@ -404,6 +404,23 @@ function cactus_customizer_library_options() {
 		'panel' => $panel
 	);
 	
+	$options['title_bar_layout'] = array(
+			'id' => 'title_bar_layout',
+			'label'   => __( 'Title Bar Layout', 'cactus' ),
+			'section' => $section,
+			'type'    => 'radio',
+			'choices' => array(
+				'title-left'=> __( 'Left Title, right breadcrumbs', 'cactus' ),
+				'title-right'=> __( 'Right Title, left breadcrumbs', 'cactus' ),
+				'title-center'=> __( 'Center', 'cactus' ),
+				'title-left2'=> __( 'Left', 'cactus' ),
+				'title-right2'=> __( 'Right', 'cactus' )
+				),
+			'transport' => $transport,
+			'default' => 'title-left',
+			
+		);
+	
 	$options['sticky_header'] = array(
 			'id' => 'sticky_header',
 			'label'   => __( 'Sticky Navigation Bar', 'cactus' ),
@@ -1943,6 +1960,15 @@ function cactus_customizer_library_options() {
 				'left'=> array('label'=>__( 'Left Sidebar', 'cactus' ),'url'=> $imagepath.'customize/sidebar-left.png'),
 				'right'=> array('label'=>__( 'Right Sidebar', 'cactus' ),'url'=> $imagepath.'customize/sidebar-right.png'),
 				),
+		);
+		
+	$options['homepage_animation'] = array(
+			'id' => 'homepage_animation',
+			'label'   => __( 'Homepage Animation', 'cactus' ),
+			'section' => 'static_front_page',
+			'type'    => 'checkbox',
+			//'transport' => 'postMessage', 
+			'default' => '1',
 		);
 	
 

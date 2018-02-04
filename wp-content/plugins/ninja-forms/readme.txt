@@ -3,7 +3,7 @@ Contributors: wpninjasllc, kstover, jameslaws, kbjohnson90, klhall1987, krmoorho
 Tags: form, forms, contact form, custom form, form builder, form creator, form manager, form creation, contact forms, custom forms, forms builder, forms creator, forms manager, forms creation, form administration,
 Requires at least: 4.7
 Tested up to: 4.9
-Stable tag: 3.2.10
+Stable tag: 3.2.11
 License: GPLv2 or later
 
 Drag and drop fields in an intuitive UI to create contact forms, email subscription forms, order forms, payment forms, send emails and more!
@@ -111,15 +111,32 @@ For help and video tutorials, please visit our website: [Ninja Forms Documentati
 
 == Upgrade Notice ==
 
-= 3.2.10 (23 January 2018) =
+= 3.2.11 (26 January 2018) =
 
 *Bugs:*
 
 * Fixed an issue that sometimes caused forms to not display after publish.
 * Calculations with a decimal setting of 0 should now properly round to 0 decimal places instead of the default 2.
 * Fixed a bug that was causing some settings boxes to contain seemingly random snippets of code.
+* Resolved an error that sometimes caused PHP warnings on certain admin pages.
+* Help text should now display properly again.
+
+*Changes:*
+
+* Updated translation packs for Spanish (Spain and Mexico), courtesy of Jesus Garcia.
 
 == Changelog ==
+
+= 3.2.11 (26 January 2018) =
+
+*Bugs:*
+
+* Resolved an error that sometimes caused PHP warnings on certain admin pages.
+* Help text should now display properly again.
+
+*Changes:*
+
+* Updated translation packs for Spanish (Spain and Mexico), courtesy of Jesus Garcia.
 
 = 3.2.10 (23 January 2018) =
 

@@ -982,11 +982,11 @@ ul.cactus-portfolio-list[class*="cactus-list-md"] > li {
     box-shadow: 1px 1px 10px 3px rgba(0,0,0,.1);
 }
 
-@media screen and (min-width: 992px) {
+/*@media screen and (min-width: 992px) {
     .cactus-blog-feature-img + .cactus-entry-main {
         margin: -20px -20px 0 20px;
     }
-}
+}*/
 
 .cactus-blog-feature-img img {
     width: 100%;

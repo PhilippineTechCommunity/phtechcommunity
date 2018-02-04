@@ -1,5 +1,5 @@
 <?php
-global $allowedposttags, $cactus_section_key;
+global $allowedposttags, $cactus_section_key, $cactus_animation;
 $works = cactus_option('works');
 $columns = absint(cactus_option('columns_'.$cactus_section_key));
 $style = absint(cactus_option('style_'.$cactus_section_key));
@@ -16,14 +16,15 @@ if( $style == '2' ){
 <div class="cactus-section-content">
 
   <div class="works_container_selective <?php echo $container;?>">
-    <h2 class="cactus-section-title text-center <?php echo 'section_title_'.$cactus_section_key.'_selective';?>"><?php echo wp_kses( $section_title , $allowedposttags );?></h2>
-    <p class="cactus-section-desc text-center <?php echo 'section_subtitle_'.$cactus_section_key.'_selective';?>"><?php echo wp_kses( $section_subtitle , $allowedposttags );?></p>
+    <h2 class="cactus-section-title text-center <?php echo 'section_title_'.$cactus_section_key.'_selective '.$cactus_animation;?>" data-animationduration="0.9" data-animationtype="fadeInUp"><?php echo wp_kses( $section_title , $allowedposttags );?></h2>
+    <p class="cactus-section-desc text-center <?php echo 'section_subtitle_'.$cactus_section_key.'_selective '.$cactus_animation;?>" data-animationduration="0.9" data-animationtype="fadeInUp"><?php echo wp_kses( $section_subtitle , $allowedposttags );?></p>
     <?php 
 	$tags = array();
 	$items = '';
 	$id = uniqid('portfolio-');
 	$index = 0;
 	if(is_array($works)):
+	$time = 0.6;
 	foreach($works as $item):
       $large_image = $item['image'];
 	  $image = $item['image'];
@@ -41,10 +42,11 @@ if( $style == '2' ){
 		$class = 'group-'.sanitize_title($item['tag']);
 		$tags[sanitize_title($item['tag'])] ='<li><a href="javascript:;" class="control" data-filter=".'.$class.'">'.esc_attr($item['tag']).'</a></li>';
 	}
+		
 	
 	if($style=='1'):
 	$items .= '<li id="cactus-work-'.$index.'" class="mix element-item grid-item '.$class.'">
-        <div class="cactus-gallery-item"> <div class="cactus-gallery-figure"><img src="'.esc_url($image).'" alt="'.esc_attr($item['title']).'">
+        <div class="cactus-gallery-item '.$cactus_animation.'" data-animationduration="'.$time.'" data-animationtype="fadeInUp"> <div class="cactus-gallery-figure"><img src="'.esc_url($image).'" alt="'.esc_attr($item['title']).'">
           <div class="cactus-overlay">
             <div class="cactus-overlay-content">
               <div>';
@@ -57,8 +59,8 @@ if( $style == '2' ){
         </div>
       </li>';
 	  else:
-	  $items .= ' <li id="cactus-work-'.$index.'" class="mix element-item grid-item '.$class.'">
-					<div class="cactus-gallery-item">
+	  $items .= ' <li id="cactus-work-'.$index.'" class="mix element-item grid-item '.$class.'" data-animationduration="'.$time.'" data-animationtype="fadeInUp">
+					<div class="cactus-gallery-item '.$cactus_animation.'" data-animationduration="'.$time.'" data-animationtype="fadeInUp">
 						<div class="cactus-gallery-figure">
 							<img src="'.esc_url($image).'" alt="'.esc_attr($item['title']).'">
 							'.(($link!='')?'<a href="'.esc_url($link).'">':'').'
@@ -78,6 +80,7 @@ if( $style == '2' ){
 	endif;
 	
 	$index++;
+	$time += 0.1;
 	endforeach;
 	endif;
 	?>

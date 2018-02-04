@@ -148,7 +148,7 @@ function cactus_scripts() {
 	wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/assets/plugins/owl-carousel/js/owl.carousel.min.js' , array( 'jquery' ), null, true);
 	wp_enqueue_script( 'jquery-waypoints', get_template_directory_uri() . '/assets/plugins/waypoints/jquery.waypoints.min.js' , array( 'jquery' ), null, true);
 	
-	if(cactus_option('section_hide_counter')!='1')
+	if(cactus_option('section_hide_counter')!='1'&&cactus_option('section_hide_counter')!='on')
 		wp_enqueue_script( 'jquery-counterup', get_template_directory_uri() . '/assets/plugins/counter-up/jquery.counterup.js' , array( 'jquery' ), null, true);
 	
 	$mixitup = 0;
@@ -277,7 +277,8 @@ function cactus_scripts() {
 			$custom_css .= ".banner_video_background{
 			 	 background-image:url(".esc_attr( $video_poster_banner ).");
 		  	}\r\n";
-
+			
+	$custom_css = apply_filters( 'cactus_additional_css', $custom_css );
 	wp_add_inline_style( 'cactus-style', wp_filter_nohtml_kses($custom_css) );
 }
 add_action( 'wp_enqueue_scripts', 'cactus_scripts' );
@@ -637,9 +638,16 @@ function cactus_option_saved($name){
  */
 function cactus_do_sections(){
 	
-	global $cactus_sections, $cactus_section_key;
+	global $cactus_sections, $cactus_section_key, $cactus_animation;
 	
 	$cactus_new_sections = array();
+
+	$homepage_animation = cactus_option('homepage_animation');
+	if($homepage_animation == '0' || $homepage_animation == '' )
+		$cactus_animation = '';
+	else
+		$cactus_animation = 'cactus-animation';
+					
 	$section_order = cactus_option('section_order');
 	if($section_order !=''){
 		$my_sections = @json_decode($section_order,true);
@@ -674,6 +682,7 @@ function cactus_do_sections(){
 		   if( $section_hide != '1' || is_customize_preview() ):
 		     if (is_customize_preview() && $section_hide == '1')
 			 	$css_class .= ' hide';
+				
 			 echo '<div id="'.esc_attr($section_id).'" class="'.$css_class.'">';
 			 do_action('cactus_before_section_'.$key);
 			 get_template_part('sections/template',$key);
@@ -1598,26 +1607,33 @@ function cactus_footer_script(){
  } 
 add_action('wp_footer','cactus_footer_script');
 
+
+
 /**
  * Add title bar
  *
  */
 function cactus_page_title_bar(  $content, $type='page'){
-    
-	$html = '<section class="page-title-bar title-left">';
+    $title_bar_layout = cactus_option('title_bar_layout');
+	$title_bar_layout = apply_filters('cactus_title_bar_layout',$title_bar_layout);
+	$class = 'page-title-bar '.$title_bar_layout;
+	$html = '<section class="'.$class.'">';
 	$html .= '<div class="container">';
-   if($type=='page'){
-   	$html .= ' <hgroup class="page-title">';
-   	$html .= '<h1>'.get_the_title().'</h1>';
-    $html .= '</hgroup>';
+	$html .= '<div class="page-title-bar-inner">';
+	if($type=='page'){
+   		$html .= ' <hgroup class="page-title">';
+   		$html .= '<h1>'.get_the_title().'</h1>';
+    	$html .= '</hgroup>';
      }
+	 
     $html .= '<div class="breadcrumb-nav">';
 	ob_start();
     cactus_breadcrumbs();
 	$html .= ob_get_contents();
 	ob_end_clean();
-    $html .= '</div>';
+	$html .= '</div>';
 	$html .= '<div class="clearfix"></div>';
+	$html .= '</div>';
 	$html .= '</div>';
 	$html .= '</section>';
 
@@ -1631,8 +1647,15 @@ add_filter( 'cactus_page_title_bar', 'cactus_page_title_bar', 10, 2 );
  *
  */
 function cuctus_get_separator($type = 'cloud', $color = '#fff', $height = '100' ){
-
-	$html = '<div class="cactus-section-separator" style="color:'.esc_attr($color).'; height:'.absint($height).'px;">';
+	
+	$class = "cactus-section-separator";
+	
+	if($type == 'triangle-up')
+		$class .= " cactus-triangle-up";
+	if($type == 'triangle-down')
+		$class .= " cactus-triangle-down";
+	
+	$html = '<div class="'.$class.'" style="color:'.esc_attr($color).'; height:'.absint($height).'px;">';
 	switch($type){
 		case "diagonal":
 			$html .= '<svg preserveAspectRatio="none" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg">

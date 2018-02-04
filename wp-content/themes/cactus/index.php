@@ -1,7 +1,7 @@
 <?php
 	get_header();
 	$blog_style = absint(cactus_option( 'blog_list_style'));
-	$page_sidebar_layout = cactus_option('blog_archives_sidebar_layout');
+	$page_sidebar_layout = apply_filters('cactus_page_sidebar_layout',cactus_option('blog_archives_sidebar_layout'));
 	switch($page_sidebar_layout){
 		case 'left':
 			$aside_class = 'page-inner row left-aside';
@@ -30,17 +30,9 @@
 		
 		};
 		
-		
 ?>
  <!--Main Area-->
-        
-        <section class="page-title-bar title-left">
-            <div class="container">
-              <?php cactus_breadcrumbs();?>
-                    
-                <div class="clearfix"></div>            
-            </div>
-        </section>
+<?php echo apply_filters('cactus_page_title_bar','','category');?> 
         <div class="page-wrap">
             <div class="container">
                 <div class="<?php echo $aside_class; ?>">

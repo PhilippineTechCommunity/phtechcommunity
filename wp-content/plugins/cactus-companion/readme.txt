@@ -30,6 +30,9 @@ Activate plugin at "Plugins" administration page.
 
 == Changelog ==
 
+= 1.0.6 =
+* Added category options
+
 = 1.0.5 =
 * Added page sidebar option
 * Added post options

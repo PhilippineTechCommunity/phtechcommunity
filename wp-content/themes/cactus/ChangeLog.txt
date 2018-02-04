@@ -2,6 +2,11 @@
 
 == CHANGE LOG == 
 
+= Version 1.2.0 = = 31/01/2018
+* Add - added "Title Bar Layout" option
+* Add - added options for category
+* Add - added animation for home page sections
+
 = Version 1.1.9 = = 23/01/2018
 * Add - added banner bottom separator
 * Add - added Text Align option for section banner

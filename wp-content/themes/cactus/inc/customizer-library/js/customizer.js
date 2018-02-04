@@ -23,6 +23,14 @@
 		} );
 	} );
 	
+	wp.customize( 'cactus[title_bar_layout]', function( value ) {
+		value.bind( function( to ) {
+
+				$( '.page-title-bar' ).removeClass( 'title-left title-right title-center title-left2 title-right2' ).addClass(to);
+		
+		} );
+	} );
+	
 	wp.customize( 'cactus[display_topbar]', function( value ) {
 		value.bind( function( to ) {
 			if( to == '1' ){
