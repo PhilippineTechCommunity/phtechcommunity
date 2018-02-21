@@ -2,7 +2,7 @@
 Theme Name: Cactus
 Author: VelaThemes
 Description: Cactus is a modern and elegant WordPress theme which can be used to build both one-page and multi-page sites. With 10+ prebuilt sections, it is ideal for any type of site like design agency, corporate, restaurant, personal, showcase, magazine, portfolio, ecommerce, etc. Not only for the sections in front page, Cactus also offers various options for header, footer, pages & posts, etc. And the theme is compatible with Elementor Page Builder, WooCommerce, Polylang.
-Version: 1.2.0
+Version: 1.2.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cactus
@@ -599,7 +599,6 @@ body {
 
 .main-header {
 	background-color: #fff;/*optional*/
-	background-image:;/*optional*/
 	color: #555; /*optional*/
 	width: 100%;
 }
@@ -681,7 +680,6 @@ body {
 
 .main-header.style2 .main-header-bottom {
     border-top: 1px solid #ccc;
-    background-color: ;
 }
 
 .logo-box .pull-left + .pull-left {

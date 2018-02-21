@@ -2,6 +2,10 @@
 
 == CHANGE LOG == 
 
+= Version 1.2.1 = = 08/02/2018
+* Fix - fixed child theme issue
+* Optimized: increase the size of the logo 
+
 = Version 1.2.0 = = 31/01/2018
 * Add - added "Title Bar Layout" option
 * Add - added options for category

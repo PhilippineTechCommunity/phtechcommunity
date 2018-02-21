@@ -248,10 +248,10 @@ class Cactus_Control_Repeater extends WP_Customize_Control {
 							wp_enqueue_style( 'cactus-select2', CUSTOMIZER_LIB_URI . '/assets/vendor/select2/cactus.css', null );
 							break;
 						case 'iconpicker':
-							wp_enqueue_script( 'cactus-fontawesome-iconpicker', get_stylesheet_directory_uri() . '/inc/customizer-library/custom-controls/iconpicker-control/assets/js/fontawesome-iconpicker.min.js', array( 'jquery' ), '1.0.0', true );
-							wp_enqueue_script( 'cactus-iconpicker-control', get_stylesheet_directory_uri() . '/inc/customizer-library/custom-controls/iconpicker-control/assets/js/iconpicker-control.js', array( 'jquery' ), '1.0.0', true );
-							wp_enqueue_style( 'cactus-fontawesome-iconpicker', get_stylesheet_directory_uri() . '/inc/customizer-library/custom-controls/iconpicker-control/assets/css/fontawesome-iconpicker.min.css' );
-							wp_enqueue_style( 'cactus-fontawesome', get_stylesheet_directory_uri() . '/inc/customizer-library/custom-controls/iconpicker-control/assets/css/font-awesome.min.css' );
+							wp_enqueue_script( 'cactus-fontawesome-iconpicker', get_template_directory_uri() . '/inc/customizer-library/custom-controls/iconpicker-control/assets/js/fontawesome-iconpicker.min.js', array( 'jquery' ), '1.0.0', true );
+							wp_enqueue_script( 'cactus-iconpicker-control', get_template_directory_uri() . '/inc/customizer-library/custom-controls/iconpicker-control/assets/js/iconpicker-control.js', array( 'jquery' ), '1.0.0', true );
+							wp_enqueue_style( 'cactus-fontawesome-iconpicker', get_template_directory_uri() . '/inc/customizer-library/custom-controls/iconpicker-control/assets/css/fontawesome-iconpicker.min.css' );
+							wp_enqueue_style( 'cactus-fontawesome', get_template_directory_uri() . '/inc/customizer-library/custom-controls/iconpicker-control/assets/css/font-awesome.min.css' );
 						break;
 						
 					}

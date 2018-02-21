@@ -1,6 +1,6 @@
 <?php
 
-define('CACTUS_VERSION','1.1.10');
+define('CACTUS_VERSION','1.2.0');
 define('CACTUS_TEXTDOMAIN','cactus');
 
 if( !function_exists('is_plugin_active') ) {
@@ -55,9 +55,9 @@ function cactus_setup() {
 
 	// Add theme support for Custom Logo.
 	add_theme_support( 'custom-logo', array(
-		'width'       => 152,
-		'height'      => 50,
+		'height'      => 100,
 		'flex-width'  => true,
+		'flex-height' => true,
 	) );
 	
 	// Setup the WordPress core custom header feature.
