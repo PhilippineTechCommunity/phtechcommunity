@@ -49,8 +49,6 @@
       </ul>
       <?php endif;	?>
       <div class="site-info"><span class="copyright_selective"><?php echo do_shortcode(wp_kses($copyright, $allowedposttags));?></span>
-	<?php printf(__('Designed by <a href="%s" target="_blank">Vela Themes</a>. All Rights Reserved.','cactus'),esc_url('https://www.velathemes.com/'));
-	?>
       </div>
     </div>
     
@@ -108,8 +106,7 @@
 								  </ul>
 								  <?php endif;	?>
                             <div class="site-info"><span class="copyright_selective"><?php echo do_shortcode(wp_kses($copyright, $allowedposttags));?></span>
-	<?php printf(__('Designed by <a href="%s" target="_blank">Vela Themes</a>. All Rights Reserved.','cactus'),esc_url('https://www.velathemes.com/'));
-	?>
+	
       </div>
                         </div>
                     </div>
