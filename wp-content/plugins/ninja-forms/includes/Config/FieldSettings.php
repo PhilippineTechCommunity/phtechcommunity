@@ -314,7 +314,7 @@ return apply_filters( 'ninja_forms_field_settings', array(
                 'name' => 'input_limit_msg',
                 'type' => 'textbox',
                 'label' => __( 'Text to Appear After Counter', 'ninja-forms' ),
-                'placeholder' => __( 'Character(s) left' ),
+                'placeholder' => __( 'Character(s) left', 'ninja-forms' ),
                 'width' => 'full',
                 'value' => __( 'Character(s) left', 'ninja-forms' )
             )
@@ -331,6 +331,21 @@ return apply_filters( 'ninja_forms_field_settings', array(
     | These settings should only be used for specific reasons.
     |
     */
+
+    /*
+     * Custom Name Attribute
+     */
+
+    'custom_name_attribute' => array(
+        'name' => 'custom_name_attribute',
+        'type' => 'textbox',
+        'label' => __( 'Custom Name Attribute', 'ninja-forms' ),
+        'width' => 'full',
+        'group' => 'advanced',
+        'value' => '',
+        'help' => __( 'This value will be used as the HTML input "name" attribute.', 'ninja-forms' ),
+        'use_merge_tags' => FALSE,
+    ),
 
     /*
      * INPUT PLACEHOLDER
@@ -455,7 +470,7 @@ return apply_filters( 'ninja_forms_field_settings', array(
                 'value' => 'dddd, MMMM D YYYY',
             ),
         ),
-        'value'         => '',
+        'value'         => 'default',
     ),
 
     /*

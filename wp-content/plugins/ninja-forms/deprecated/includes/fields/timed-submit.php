@@ -8,7 +8,7 @@ function ninja_forms_register_field_timed_submit(){
 				'name' => 'label',
 				'label' => __( 'Label', 'ninja-forms' ),
 				'desc' => __( 'Submit button text after timer expires', 'ninja-forms' ),
-				'default' => __( 'Submit' ),
+				'default' => __( 'Submit', 'ninja-forms' ),
 				'class' => 'widefat ninja-forms-field-label'
 			),
 			array(

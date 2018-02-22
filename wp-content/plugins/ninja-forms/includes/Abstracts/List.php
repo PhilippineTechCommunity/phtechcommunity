@@ -51,7 +51,7 @@ abstract class NF_Abstracts_List extends NF_Abstracts_Field
             }            
         }
 
-        return "<select class='widefat' name='fields[ " . esc_attr( $id ) . " ]' id=''>$options</select>";
+        return "<select class='widefat' name='fields[" . esc_attr( $id ) . "]' id=''>$options</select>";
     }
 
     /*

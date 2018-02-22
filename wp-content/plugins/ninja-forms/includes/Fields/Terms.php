@@ -30,7 +30,15 @@ class NF_Fields_Terms extends NF_Fields_ListCheckbox
 
         $this->_nicename = __( 'Terms List', 'ninja-forms' );
 
-        add_action( 'admin_init', array( $this, 'init_settings' ) );
+        // If we are on the ninja-forms page...
+        // OR we're looking at nf_sub post types...
+        // OR we're editing a single post...
+        if ( ( ! empty( $_GET[ 'page' ] ) && 'ninja-forms' == $_GET[ 'page' ] ) ||
+           ( ! empty( $_GET[ 'post_type' ] ) && 'nf_sub' == $_GET[ 'post_type' ] ) ||
+           isset( $_GET[ 'post' ] ) ) {
+            // Initiate the termslist.
+            add_action( 'admin_init', array( $this, 'init_settings' ) );
+        }
 
         add_filter( 'ninja_forms_display_field', array( $this, 'active_taxonomy_field_check' ) );
         add_filter( 'ninja_forms_localize_field_' . $this->_type, array( $this, 'add_term_options' ) );
@@ -108,7 +116,7 @@ class NF_Fields_Terms extends NF_Fields_ListCheckbox
         $this->_settings[ 'taxonomy_terms' ] = array(
             'name' => 'taxonomy_terms',
             'type' => 'fieldset',
-            'label' => __( 'Available Terms' ),
+            'label' => __( 'Available Terms', 'ninja-forms' ),
             'width' => 'full',
             'group' => 'primary',
             'settings' => $term_settings

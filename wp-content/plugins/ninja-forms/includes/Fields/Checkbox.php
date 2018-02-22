@@ -53,8 +53,8 @@ class NF_Fields_Checkbox extends NF_Abstracts_Input
      */
     public function admin_form_element( $id, $value )
     {
-        // If the checkboxes value is one...
-        if( 1 == $value ) {
+        // If the checkboxes value is 1 or on...
+        if( 'on' == $value || 1 == $value ) {
             // ...this variable to checked.
             $checked = 'checked';
         } else {
@@ -81,14 +81,14 @@ class NF_Fields_Checkbox extends NF_Abstracts_Input
         // If the field type is equal to checkbox...
         if( 'checkbox' == $field->get_setting( 'type' ) ) {
             // Backwards compatibility check for the new checked value setting.
-            if( null == $field->get_setting( 'checked_value' ) && 1 == $value ) {
+            if( null == $field->get_setting( 'checked_value' ) && 1 == $value || 'on' == $value ) {
                 return __( 'Checked', 'ninja-forms' );
             } elseif( null == $field->get_setting( 'unchecked_value' ) && 0 == $value ) {
                 return __( 'Unchecked', 'ninja-forms');
             }
 
             // If the field value is set to 1....
-            if( 1 == $value ) {
+            if( 1 == $value || 'on' == $value) {
                 // Set the value to the checked value setting.
                 $value = $field->get_setting( 'checked_value' );
             } else {
@@ -151,13 +151,25 @@ class NF_Fields_Checkbox extends NF_Abstracts_Input
         // If value is equal to checked or unchecked return the value
         if ( __( 'checked', 'ninja-forms' ) == $value ||
             __( 'unchecked', 'ninja-forms' ) == $value ) return $value;
-        // If the value is a boolean...
-        if ( $value ) {
-            // ...if true return checked
-            return $field->get_setting( 'checked_value' );
-        } else {
-            // ...else return unchecked.
-            return $field->get_setting( 'unchecked_value' );
+
+        // Creating settings variables for our check.
+        $checked_setting    = $field->get_setting( 'checked_value' );
+        $unchecked_setting  = $field->get_setting( 'unchecked_value' );
+
+        // If the the value and check to see if we have checked and unchecked settings...
+        if ( 1 == $value && ! empty( $checked_setting ) ) {
+            // ...if we do return checked setting
+            return $checked_setting;
+        } elseif ( 0 == $value && ! empty( $unchecked_setting ) ) {
+            // ...else return unchecked setting.
+            return $unchecked_setting;
+        /*
+         * These checks are for checkbox fields that were created before version 3.2.7.
+         */
+        } elseif ( 1 == $value  ) {
+            return __( 'checked', 'ninja-forms' );
+        } elseif ( 0 == $value ) {
+            return __( 'unchecked', 'ninja-forms' );
         }
     }
 }

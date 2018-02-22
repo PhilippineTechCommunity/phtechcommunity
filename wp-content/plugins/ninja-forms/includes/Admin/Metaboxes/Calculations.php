@@ -4,6 +4,9 @@ final class NF_Admin_Metaboxes_Calculations extends NF_Abstracts_SubmissionMetab
 {
     public function __construct()
     {
+        // Only load if we are editing a post.
+        if( ! isset( $_GET[ 'post' ] ) ) return;
+
         parent::__construct();
 
         $this->_title = __( 'Calculations', 'ninja-forms' );
@@ -16,7 +19,7 @@ final class NF_Admin_Metaboxes_Calculations extends NF_Abstracts_SubmissionMetab
     public function render_metabox( $post, $metabox )
     {
         $data = $this->sub->get_extra_values( array( 'calculations' ) );
-        
+
 
         Ninja_Forms::template( 'admin-metaboxes-calcs.html.php', $data[ 'calculations' ] );
     }

@@ -1,3 +1,15 @@
 <script id="tmpl-nf-field-tel" type="text/template">
-	<input id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" type="tel" value="{{{ data.value }}}" {{{ data.renderPlaceholder() }}}>
+	<input
+			type="tel"
+			value="{{{ data.value }}}"
+			class="{{{ data.renderClasses() }}} nf-element"
+
+			id="nf-field-{{{ data.id }}}"
+			name="nf-field-{{{ data.id }}}"
+			autocomplete="tel"
+			{{{ data.renderPlaceholder() }}}
+
+			aria-invalid="false"
+			aria-describedby="nf-error-{{{ data.id }}}"
+	>
 </script>

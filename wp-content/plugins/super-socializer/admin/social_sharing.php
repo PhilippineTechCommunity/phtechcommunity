@@ -1788,7 +1788,7 @@
 						<tr class="the_champ_help_content" id="the_champ_sc_language_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Enter the code of the language you want to use for like buttons. You can find the language codes at <a href="%s" target="_blank">this link</a>. Leave it empty for default language(English)', 'Super-Socializer' ), '//www.facebook.com/translations/FacebookLocales.xml') ?>
+							<?php echo sprintf(__('Enter the code of the language you want to use for like buttons. You can find the language codes at <a href="%s" target="_blank">this link</a>. Leave it empty for default language(English)', 'Super-Socializer' ), 'https://fbdevwiki.com/wiki/Locales#Complete_List_.28as_of_2012-06-10.29') ?>
 							</div>
 							</td>
 						</tr>

@@ -5,7 +5,7 @@ function theChampInitiateFB() {
         status: !0,
         cookie: !0,
         xfbml: !0,
-        version: "v2.8"
+        version: "v2.11"
     })
 }
 window.fbAsyncInit = function() {

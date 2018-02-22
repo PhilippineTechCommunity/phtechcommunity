@@ -236,7 +236,7 @@ function the_champ_fb_commenting_shortcode($params){
     $html .= ' data-numposts="' . $num_posts . '"';
     $html .= ' data-width="' . ($width == '' ? '100%' : $width) . '"';
     $html .= ' ></div></div><script type="text/javascript" src="//connect.facebook.net/' . $language . '/sdk.js
-    "></script><script>FB.init({xfbml:1,version: "v2.8"});</script>';
+    "></script><script>FB.init({xfbml:1,version: "v2.11"});</script>';
 	return $html;
 }
 add_shortcode('TheChamp-FB-Comments', 'the_champ_fb_commenting_shortcode');

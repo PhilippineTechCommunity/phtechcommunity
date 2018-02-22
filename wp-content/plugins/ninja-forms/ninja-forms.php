@@ -3,7 +3,7 @@
 Plugin Name: Ninja Forms
 Plugin URI: http://ninjaforms.com/
 Description: Ninja Forms is a webform builder with unparalleled ease of use and features.
-Version: 3.2.11
+Version: 3.2.14
 Author: The WP Ninjas
 Author URI: http://ninjaforms.com
 Text Domain: ninja-forms
@@ -53,7 +53,7 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
         /**
          * @since 3.0
          */
-        const VERSION = '3.2.11';
+        const VERSION = '3.2.14';
 
         const WP_MIN_VERSION = '4.7';
 
@@ -271,7 +271,7 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
                 new NF_Admin_CPT_Submission();
                 new NF_Admin_CPT_DownloadAllSubmissions();
                 require_once Ninja_Forms::$dir . 'lib/StepProcessing/menu.php';
-                
+
                 /*
                  * Submission Metabox
                  */
@@ -318,6 +318,11 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
                 self::$instance->notices = new NF_Admin_Notices();
 
                 self::$instance->widgets[] = new NF_Widget();
+
+                /*
+                 * Gutenberg
+                 */
+                self::$instance->gutenblock = new NF_FormBlock();
 
                 /*
                  * Opt-In Tracking
@@ -375,7 +380,7 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
 
             add_filter( 'ninja_forms_dashboard_menu_items', array( $this, 'maybe_hide_dashboard_items' ) );
         }
-        
+
         public function maybe_hide_dashboard_items( $items )
         {
             $disable_marketing = false;
@@ -787,7 +792,7 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
          * Make sure that we've reported our opt-in.
          */
         if( get_option( 'ninja_forms_optin_reported', 0 ) ) return;
-        
+
         Ninja_Forms()->dispatcher()->send( 'optin', array( 'send_email' => 1 ) );
         // Debounce opt-in dispatch.
         update_option( 'ninja_forms_optin_reported', 1 );

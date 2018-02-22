@@ -399,15 +399,15 @@ class NF_Subs_CPT {
 				} else {
 					echo '<div class="row-actions custom-row-actions">';
 					do_action( 'nf_sub_table_before_row_actions_trash', $sub_id, $column );
-					echo '<span class="untrash"><a title="' . esc_attr( __( 'Restore this item from the Trash' ) ) . '" href="' . wp_nonce_url( sprintf( get_edit_post_link( $sub_id ) . '&amp;action=untrash', $sub_id ) , 'untrash-post_' . $sub_id ) . '">' . __( 'Restore' ) . '</a> | </span> 
-					<span class="delete"><a class="submitdelete" title="' . esc_attr( __( 'Delete this item permanently' ) ) . '" href="' . get_delete_post_link( $sub_id, '', true ) . '">' . __( 'Delete Permanently' ) . '</a></span>';
+					echo '<span class="untrash"><a title="' . esc_attr( __( 'Restore this item from the Trash', 'ninja-forms' ) ) . '" href="' . wp_nonce_url( sprintf( get_edit_post_link( $sub_id ) . '&amp;action=untrash', $sub_id ) , 'untrash-post_' . $sub_id ) . '">' . __( 'Restore', 'ninja-forms' ) . '</a> | </span> 
+					<span class="delete"><a class="submitdelete" title="' . esc_attr( __( 'Delete this item permanently', 'ninja-forms' ) ) . '" href="' . get_delete_post_link( $sub_id, '', true ) . '">' . __( 'Delete Permanently', 'ninja-forms' ) . '</a></span>';
 					do_action( 'nf_sub_table_after_row_actions_trash', $sub_id, $column );
 					echo '</div>';
 				}
 			} else if ( $column == 'sub_date' ) {
 				$post = get_post( $sub_id );
 				if ( '0000-00-00 00:00:00' == $post->post_date ) {
-					$t_time = $h_time = __( 'Unpublished' );
+					$t_time = $h_time = __( 'Unpublished', 'ninja-forms' );
 					$time_diff = 0;
 				} else {
 					$t_time = get_the_time( 'Y/m/d g:i:s A' );
@@ -417,7 +417,7 @@ class NF_Subs_CPT {
 					$time_diff = time() - $time;
 
 					if ( $time_diff > 0 && $time_diff < DAY_IN_SECONDS )
-						$h_time = sprintf( __( '%s ago' ), human_time_diff( $time ) );
+						$h_time = sprintf( __( '%s ago', 'ninja-forms' ), human_time_diff( $time ) );
 					else
 						$h_time = mysql2date( 'Y/m/d', $m_time );
 				}
@@ -647,11 +647,11 @@ class NF_Subs_CPT {
 		$messages[$post_type] = array(
 			0 => 	'', // Unused. Messages start at index 1.
 			1 => 	sprintf( __( '%s updated.', 'ninja-forms' ), $singular ),
-			2 => 	__( 'Custom field updated.' ),
-			3 => 	__( 'Custom field deleted.' ),
+			2 => 	__( 'Custom field updated.', 'ninja-forms' ),
+			3 => 	__( 'Custom field deleted.', 'ninja-forms' ),
 			4 => 	sprintf( __( '%s updated.', 'ninja-forms' ), $singular ),
 			/* translators: %s: date and time of the revision */
-			5 => 	isset($_GET['revision']) ? sprintf( __( '%1$s restored to revision from %2$s.' ), $singular, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+			5 => 	isset($_GET['revision']) ? sprintf( __( '%1$s restored to revision from %2$s.', 'ninja-forms' ), $singular, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
 			6 => 	sprintf( __( '%s published.', 'ninja-forms' ), $singular ),
 			7 => 	sprintf( __( '%s saved.', 'ninja-forms' ), $singular ),
 			8 => 	sprintf( __( '%1$s submitted. <a href="%2$s" target="_blank">Preview %3$s</a>', 'ninja-forms' ), $singular, esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ), $singular ),
@@ -691,8 +691,8 @@ class NF_Subs_CPT {
 			?>
 			<script type="text/javascript">
 				jQuery(document).ready(function() {
-					jQuery('<option>').val('export').text('<?php _e('Export')?>').appendTo("select[name='action']");
-					jQuery('<option>').val('export').text('<?php _e('Export')?>').appendTo("select[name='action2']");
+					jQuery('<option>').val('export').text('<?php _e('Export', 'ninja-forms')?>').appendTo("select[name='action']");
+					jQuery('<option>').val('export').text('<?php _e('Export', 'ninja-forms')?>').appendTo("select[name='action2']");
 					<?php
 					if ( ( isset ( $_POST['action'] ) && $_POST['action'] == 'export' ) || ( isset ( $_POST['action2'] ) && $_POST['action2'] == 'export' ) ) {
 					?>

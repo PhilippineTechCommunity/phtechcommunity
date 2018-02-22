@@ -4,7 +4,7 @@ Donate link: https://www.heateor.com/donate?action=Super+Socializer
 Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media, facebook login
 Requires at least: 2.5.0
 Tested up to: 4.9.4
-Stable tag: 7.10.4
+Stable tag: 7.10.5
 License: GPLv2 or later
 
 The unique Social Plugin to let you integrate Social Login, Social Share and Social Comments at your website
@@ -208,6 +208,13 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 8. **Social Commenting**: Disqus Commenting selected
 
 == Changelog ==
+= 7.10.5 =
+* [Bugfix] Social Account Linking was not working in some cases after updating to version 7.10
+* [Improvement] Improved "More" share icons popup for mobile devices
+* [Improvement] Improved admin UI for mobile devices
+* [Improvement] Upgraded version of official Facebook SDK being used throughout the plugin
+* [Improvement] Link to language codes at plugin options page was broken
+
 = 7.10.4 =
 * [Bugfix] Some social media follow icons were appearing broken in a few cases
 * [Bugfix] Initial share count was appearing as 0 at webpages in some cases
@@ -1383,3 +1390,10 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Bugfix] Some social media follow icons were appearing broken in a few cases
 * [Bugfix] Initial share count was appearing as 0 at webpages in some cases
 * [New] Added "heateor_ss_follow_icons" filter to customize "Follow Icons" widget
+
+= 7.10.5 =
+* [Bugfix] Social Account Linking was not working in some cases after updating to version 7.10
+* [Improvement] Improved "More" share icons popup for mobile devices
+* [Improvement] Improved admin UI for mobile devices
+* [Improvement] Upgraded version of official Facebook SDK being used throughout the plugin
+* [Improvement] Link to language codes at plugin options page was broken

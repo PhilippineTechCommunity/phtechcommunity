@@ -3,7 +3,7 @@ Contributors: wpninjasllc, kstover, jameslaws, kbjohnson90, klhall1987, krmoorho
 Tags: form, forms, contact form, custom form, form builder, form creator, form manager, form creation, contact forms, custom forms, forms builder, forms creator, forms manager, forms creation, form administration,
 Requires at least: 4.7
 Tested up to: 4.9
-Stable tag: 3.2.11
+Stable tag: 3.2.14
 License: GPLv2 or later
 
 Drag and drop fields in an intuitive UI to create contact forms, email subscription forms, order forms, payment forms, send emails and more!
@@ -111,21 +111,59 @@ For help and video tutorials, please visit our website: [Ninja Forms Documentati
 
 == Upgrade Notice ==
 
-= 3.2.11 (26 January 2018) =
+= 3.2.14 (20 February 2018) =
+
+*Security:*
+
+* Patched a potential XSS vulnerability. Many thanks to Kasper Karlsson at Omegapoint for practicing responsible disclosure.
 
 *Bugs:*
 
-* Fixed an issue that sometimes caused forms to not display after publish.
-* Calculations with a decimal setting of 0 should now properly round to 0 decimal places instead of the default 2.
-* Fixed a bug that was causing some settings boxes to contain seemingly random snippets of code.
-* Resolved an error that sometimes caused PHP warnings on certain admin pages.
-* Help text should now display properly again.
+* Resolved an issue that was sometimes causing code snippets to appear on form display.
+* Newly created date fields should now no longer contain a timestamp in their default display setting.
+* Star rating fields should now be properly caught by required field validation.
+* Default values of star rating fields should no longer be considered "valid" for required field validation.
+* Single checkbox fields can now be edited in the submission edit screen again.
+* Resolved an issue that sometimes caused single checkbox fields to not display a value in exports.
+* Field and calculation merge tags can now be used in the same HTML field.
+* Images can once again be used in help text values.
+
+== Changelog ==
+
+= 3.2.14 (20 February 2018) =
+
+*Security:*
+
+* Patched a potential XSS vulnerability. Many thanks to Kasper Karlsson at Omegapoint for practicing responsible disclosure.
+
+*Bugs:*
+
+* Resolved an issue that was sometimes causing code snippets to appear on form display.
+* Newly created date fields should now no longer contain a timestamp in their default display setting.
+* Star rating fields should now be properly caught by required field validation.
+* Default values of star rating fields should no longer be considered "valid" for required field validation.
+* Single checkbox fields can now be edited in the submission edit screen again.
+* Resolved an issue that sometimes caused single checkbox fields to not display a value in exports.
+* Field and calculation merge tags can now be used in the same HTML field.
+* Images can once again be used in help text values.
+
+= 3.2.13 (14 February 2018) =
+
+*Bugs:*
+
+* Resolved an issue that caused recently published forms to not display in Internet Explorer.
+
+= 3.2.12 (13 February 2018) =
+
+*Bugs:*
+
+* Localized several strings for translation that had previously been missed.
+* Radio and checkbox lists will now properly save updates made on the edit submission page.
+* Resolved an issue that sometimes caused excessive page load times in the WordPress admin.
 
 *Changes:*
 
-* Updated translation packs for Spanish (Spain and Mexico), courtesy of Jesus Garcia.
-
-== Changelog ==
+* (Beta) Added a Gutenberg block to replace the shortcode when Gutenberg is active.
 
 = 3.2.11 (26 January 2018) =
 

@@ -322,7 +322,10 @@ final class NF_Display_Render
                 if( isset( $field[ 'settings' ][ 'textarea_media' ] ) && $field[ 'settings' ][ 'textarea_media' ] ){
                     array_push( self::$form_uses_textarea_media, $form_id );
                 }
-                if( isset( $field[ 'settings' ][ 'help_text' ] ) && strip_tags( $field[ 'settings' ][ 'help_text' ] ) ){
+                // strip all tags except image tags
+                if( isset( $field[ 'settings' ][ 'help_text' ] ) &&
+                    strip_tags( $field[ 'settings' ][ 'help_text' ], '<img>'
+                    ) ){
                     array_push( self::$form_uses_helptext, $form_id );
                 }
             }

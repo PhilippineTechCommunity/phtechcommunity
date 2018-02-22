@@ -129,7 +129,7 @@ final class NF_Admin_Menus_Settings extends NF_Abstracts_Submenu
             $grouped_settings[ 'saved_fields'][] = array(
                 'id' => '',
                 'type' => 'html',
-                'html' => '<a class="js-delete-saved-field button button-secondary" data-id="' . $saved_field_id . '">' . __( 'Delete' ) . '</a>',
+                'html' => '<a class="js-delete-saved-field button button-secondary" data-id="' . $saved_field_id . '">' . __( 'Delete', 'ninja-forms' ) . '</a>',
                 'label' => $saved_field->get_setting( 'label' ),
 
             );

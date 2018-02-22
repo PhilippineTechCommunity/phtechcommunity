@@ -522,6 +522,14 @@ function the_champ_account_linking(){
 			$ajaxUrl = 'admin-ajax.php';
 			$notification = '';
 			wp_enqueue_script('the_champ_sl_common', plugins_url('js/front/social_login/common.js', __FILE__), array('jquery'), THE_CHAMP_SS_VERSION);
+			wp_localize_script(
+				'the_champ_sl_common',
+				'the_champ_sl_ajax_token',
+				array(
+					'ajax_url'  => admin_url('admin-ajax.php'),
+					'security'  => wp_create_nonce('the-champ-sl-ajax-token'),
+				)
+			);
 		}
 		// linking functions
 		wp_enqueue_script('the_champ_ss_linking_script', plugins_url('js/front/social_login/linking.js', __FILE__), array('jquery'), THE_CHAMP_SS_VERSION);
