@@ -29,7 +29,12 @@
                   <div class="entry-category"><?php the_category(', '); ?></div>
                   <a href="<?php the_permalink(); ?>"><h1 class="entry-title"><?php the_title(); ?></h1></a>
                   <div class="entry-meta">
-                      <span class="entry-date"><a href="<?php echo get_month_link(get_the_time('Y'), get_the_time('m'));?>"><?php echo get_the_date("M d, Y");?></a></span> | <span class="entry-author"><?php echo esc_attr__('By' ,'cactus');?> <?php echo get_the_author_link();?></span>
+                      <span class="entry-date"><a href="<?php echo get_month_link(get_the_time('Y'), get_the_time('m'));?>"><?php echo get_the_date("M d, Y");?></a></span> | <span class="entry-author"><?php echo esc_attr__('By' ,'cactus');?> 
+                      <?php 
+	                      //echo get_the_author_link(); 
+	                      echo get_the_author_meta( 'nickname' );
+                      ?>
+                      </span>
                   </div>
               </div>
               <div class="entry-summary">
